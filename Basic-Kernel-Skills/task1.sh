@@ -1,4 +1,4 @@
-#This report describes detail on how to compile kernel on Ubuntu 22.04
+#This report describes how to compile the Linux kernel on Ubuntu 22.04
 #Step 0: Clone the source code
 $ git clone git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git
 $ cd linux
@@ -50,6 +50,10 @@ $ make menuconfig
 #Build and Install
 #Step 1: make
 #This is a very standard make. I tee the build log into another file:
+#The build command takes hours to finish (It took me 4 hours and 40 minutes). I had to increase the swap file from 4G to 10G since my RAM is only 4G. 
+#This will ensure that your build won't stop due to insufficient memory. 
+#It is also important to mention that you should close any unnecessary applications such as web browsers (they take a huge amont of RAM)
+#Lastly, I also had to stop the Pahole utility; it takes a huge amount of memory which made the OOM killer stops the whole process.
 $ make -j$(nproc) 2>&1 | tee build.log
 
 #Step 2: modules_install
