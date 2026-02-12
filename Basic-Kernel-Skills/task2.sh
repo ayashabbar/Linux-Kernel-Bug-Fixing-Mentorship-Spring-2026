@@ -21,4 +21,5 @@ $ git format-patch -s --subject-prefix="PATCH" -1 HEAD
 
 
 #Part 3: Sending the patch
-#I followed the instructions 
+#I followed the instructions on https://git-send-email.io/#step-1
+$ git send-email --to=skhan@linuxfoundation.org 0001-*.patch
