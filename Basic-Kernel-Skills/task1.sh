@@ -1,4 +1,7 @@
 #Task 1: Build and boot Linus’s latest tree 
+
+
+
 #This report describes how to compile the Linux kernel on Ubuntu 22.04
 #Step 0: Clone the source code
 $ git clone git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git
